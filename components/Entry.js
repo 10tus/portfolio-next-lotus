@@ -2,7 +2,6 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import FadeIn from "./FadeIn";
-import Image from "next/image";
 
 const Entry = ({ image, headline, body, techUsed, imgStart, link }) => {
   return (
@@ -23,7 +22,7 @@ const Entry = ({ image, headline, body, techUsed, imgStart, link }) => {
           </a>
         </Link>
       </div>
-      <Image
+      <img
         src={image}
         alt="entry image"
         className=" inset-0 object-cover rounded-md w-full xl:w-3/5 xl:max-h-96 grayscale hover:grayscale-0 shadow-2xl  shadow-black/50"
@@ -50,8 +49,8 @@ const Entry = ({ image, headline, body, techUsed, imgStart, link }) => {
             (imgStart ? " xl:justify-end" : "xl:justify-start")
           }
         >
-          {techUsed.map((val) => {
-            return <li key={val} className="text-xs">{val}</li>;
+          {techUsed.map((val,idx) => {
+            return <li key={idx} className="text-xs">{val}</li>;
           })}
         </ul>
 
