@@ -22,46 +22,4 @@
   h3 {
     @apply text-2xl font-extrabold;
   }
-  .card-wrapper {
-    position: relative;
-    border-radius: 1rem; /* roughly rounded-2xl */
-    padding: 3px;
-  }
-
-  /* Define the custom property --angle */
-  @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  /* Gradient */
-  .card-wrapper::after,.card-wrapper::before {
-    content: '';
-    position: absolute;
-    height: 102%;
-    width: 102%;
-    background-image: conic-gradient(from var(--angle), transparent,95%, #e7000b);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 3px;
-    border-radius: 1rem;
-    animation: 3s spin-angle linear infinite;
-  }
-  .card-wrapper::before {
-    filter: blur(1.5rem);
-    opacity: 0.5;
-  }
-
-  /* Animate the --angle custom property */
-  @keyframes spin-angle {
-    from {
-      --angle: 0deg;
-    }
-    to {
-      --angle: 360deg;
-    }
-  }
 }

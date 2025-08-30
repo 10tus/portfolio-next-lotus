@@ -55,6 +55,7 @@ const AboutMe = () => {
       //unmount
       clearTimeout(timeout);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [typedText, index, state,inView]);
 
   return (
