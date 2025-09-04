@@ -6,8 +6,7 @@ const AboutMe = () => {
   const [typedText, changeTyped] = useState("");
   const pos = [
     "<Software Engineer/>",
-    "<UX Designer/>",
-    "<Lover Boy/>",
+    "<UX Designer/>"
   ];
   const { ref, inView } = useInView({
     triggerOnce: false,
